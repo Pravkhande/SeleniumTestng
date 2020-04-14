@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="reports">
+  <test name="Gmail">
+      <classes>
+      <class name="com.automation.webpages.GmailPage"/>
+      </classes>
+  </test> <!-- Test --> 
+   
+  <test name="Google">    
+    <classes>
+       <class name="com.automation.webpages.GooglePage"/>
+    </classes>
+     
+   </test> <!-- Test -->
+   
+    <test name="Naukari">
+      <classes>
+      <class name="com.automation.webpages.LoadTest"/>
+      </classes>
+  </test> <!-- Test --> 
+</suite> <!-- Suite -->	
