@@ -22,7 +22,7 @@ public class BaseClass {
   public void openDriver() {
 	    System.out.println("In @BeforeMethod");
 	    String os = System.getProperty("os.name");
-	    String browserEnv = System.getenv("BROWSER");
+	    String browserEnv = System.getenv("hcap_browser_type");
 	    System.out.println("before = "+browserEnv);
 	    if (browserEnv.isEmpty()) {
 			browserEnv = "Chrome";
