@@ -23,17 +23,19 @@ public class BaseClass {
 	    System.out.println("In @BeforeMethod");
 	    String os = System.getProperty("os.name");
 	    String browserEnv = System.getenv("BROWSER");
-		if (browserEnv.isEmpty()) {
+	    System.out.println("before = "+browserEnv);
+	    if (browserEnv.isEmpty()) {
 			browserEnv = "Chrome";
 		}
-		
+	    System.out.println("after = "+browserEnv);
+	    System.out.println("OS = "+os);
 		switch (browserEnv) {
 		case "Chrome":
     		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
     		capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
     		System.out.println("opening chromedriver");
 	    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	    	if(os.contentEquals("Mac OS")) {
+	    	if(os.contains("Mac OS")) {
 	    		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	    	}
 	    	System.out.println("chrome opened");
@@ -45,7 +47,7 @@ public class BaseClass {
 			capabilitie.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			System.out.println("opening firefoxdriver");
 			System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver"); 
-	    	if(os.contentEquals("Mac OS")) {
+	    	if(os.contains("Mac OS")) {
 	    		System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
 	    	}
 			driver= new FirefoxDriver();

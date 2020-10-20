@@ -79,7 +79,7 @@ public class GooglePage extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Search);
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Keys.ENTER);
-		driver.findElement(By.xpath("//h3[contains(text(),\"Amazon.in\")]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Amazon.in')]")).click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		boolean cart = driver.findElement(By.id("nav-cart")).isDisplayed();
 		if(cart) {

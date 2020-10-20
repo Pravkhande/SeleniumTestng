@@ -17,7 +17,7 @@ public class GmailPage extends BaseClass {
 		System.out.println("In @Test1");
 			driver.get(baseUrl);
 			driver.findElement(By.xpath("//input[@type=\"email\"]")).sendKeys("shrutigoldengirl@gmail.com");
-			driver.findElement(By.xpath("//span[contains(text(),\"Next\")]")).click();
+			driver.findElement(By.xpath("//button/span[contains(text(),'Next')]")).click();
 			String actualTitle= driver.getTitle();
 			String expectedTitle= "Gmail";
 			Assert.assertEquals(actualTitle, expectedTitle);
