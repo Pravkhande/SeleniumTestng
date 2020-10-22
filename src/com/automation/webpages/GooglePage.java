@@ -72,7 +72,7 @@ public class GooglePage extends BaseClass {
 	}
 	
 	
-	@Test
+	//@Test
 	public void searchAmazonAndNavigateToAmazonURL() {
 		driver.get(baseUrl);
 		String Search="amazon";
@@ -90,6 +90,8 @@ public class GooglePage extends BaseClass {
 		}
 		
 	}
+	
+	
 	
 	
 }

@@ -12,7 +12,7 @@ public class GmailPage extends BaseClass {
 
 	String baseUrl="https://gmail.com";
 	
-	@Test
+	//@Test
 	public void  verifyGmailTitle() {
 		System.out.println("In @Test1");
 			driver.get(baseUrl);
